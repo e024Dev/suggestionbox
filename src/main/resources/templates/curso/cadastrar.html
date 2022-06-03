@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Curso</title>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+                <form th:action="@{/cursos/salvar}" method="post" th:object="${curso}">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" th:field="*{descricao}" placeholder="Nome do Curso" aria-label="Nome do curso" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">Salvar</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{../js/bootstrap.min.js}"></script>
+</body>
+</html>
